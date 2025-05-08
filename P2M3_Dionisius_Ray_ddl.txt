@@ -1,0 +1,26 @@
+URL Dataset: https://www.kaggle.com/datasets/ahmedabbas757/dataset
+
+DDL:
+CREATE TABLE table_m3 (
+    "Retailer" varchar(100),
+    "Retailer ID" int,
+    "Invoice Date" date,
+    "Region" varchar(100),
+    "State" varchar(100),
+    "City" varchar(100),
+    "Product" varchar(100),
+    "Price per Unit" varchar(100),
+    "Units Sold" varchar(100),
+    "Total Sales" varchar(100),
+    "Operating Profit" varchar(100),
+    "Sales Method" varchar(100)
+);
+
+DML:
+COPY table_m3
+FROM 'C:\Users\user\Documents\GitHub\p2-ftds025-hck-m3-ray-dion\P2M3_Dionisius_Ray_data_raw.csv'
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);

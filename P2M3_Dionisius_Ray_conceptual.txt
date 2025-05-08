@@ -1,0 +1,34 @@
+1. Jelaskan apa yang dimaksud dengan NoSQL menggunakan pemahaman yang kalian ketahui !
+    NoSQL merupakan jenis sistem manajemen data yang menyimpan data dalam bentuk bukan tabular. 
+    NoSQL ini dirancang untuk menangani tiep data seperti dokumen JSON, key-value, graph, ataupun kolom lebar
+
+2. Jelaskan kapan harus menggunakan NoSQL dan Relational Database Management System !
+    NoSQL:
+    - Data bersifat semi-terstruktur
+    - Data dalam volume yang besar
+    - Jika mempunyai bisnis yang menggunakan service micro-transaction atau data harus update secara real-time
+
+    RDMS:
+    - Data terstruktur dan memiliki relasi antar tabel
+    - Validasi dan konsistensi data sangat penting
+    - Memerlukan Query yang kompleks
+
+3. Sebutkan contoh 2 tools/platform NoSQL selain ElasticSearch beserta keunggulan tools/platform tersebut !
+    1. MongoDB
+        Menyimpan data dalam format JSON atau BSON sehingga mudah dibaca dan flexible. Cocok jika data yang disimpan memiliki struktur yang tidak tetap.
+
+    2. Redis
+        Menyimpan data di RAM sehingga pengambilan data sangat cepat. 
+
+4. Jelaskan apa yang Anda ketahui dari Airflow menggunakan pemahaman dan bahasa Anda sendiri !
+    Airflow merupakan sebuah alat yang digunakan untuk menjadwalkan sebuah proses prosesing data. 
+    Airflow dapat dikatakan sebuah pipeline untuk proses extract data, load data, dan ransformasi data.
+
+5. Jelaskan apa yang Anda ketahui dari Great Expectations menggunakan pemahaman dan bahasa Anda sendiri !
+    Great Expectations merupakan salah satu library yang dapat di-install pada Python. Library ini merupakan library yang digunakan dalam melakukan proses validasi data secara automatis. 
+    Menggunakan library ini di Python, user dapat mendefinisikan ekspetasi mereka terhadap data seperti kolom A bersifat unik, kolom B ada pada data, dst.
+
+6. Jelaskan apa yang Anda ketahui dari Batch Processing menggunakan pemahaman dan bahasa Anda sendiri (Definisi, Contoh Kasus Penggunaan, Tools, dll) !
+    Batch processing merupakan metode pemrosesan sejumlah data besar secara sekaligus dalam satu waktu. 
+    Batch processing biasanya digunakan untuk proses yang bersifat rutin seperti laporan harian, pembersihan data, atau analisis besar yang tidak perlu dilakukan langsung.
+    Salah satu contoh kasus penggunaan batch processing adalah backup data misalkan semalam sekali menggunakan AWS.
