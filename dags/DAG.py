@@ -49,12 +49,12 @@ with DAG(
         conn = engine.connect()
         
         df = pd.read_sql_query("SELECT * FROM table_m3", conn)
-        df.to_csv('/opt/airflow/data/P2M3_Dionisius_Ray_data_raw.csv', sep=',', index=False)
+        df.to_csv('/opt/airflow/data/data_raw.csv', sep=',', index=False)
         
     @task
     def data_cleaning():
         '''Function ini berfungsi untuk membersihkan data dari file csv yang sudah diambil dari postgresql'''
-        df = pd.read_csv('/opt/airflow/data/P2M3_Dionisius_Ray_data_raw.csv')
+        df = pd.read_csv('/opt/airflow/data/data_raw.csv')
         
         # Menghapus baris duplikasi
         df = df.drop_duplicates()
@@ -84,7 +84,7 @@ with DAG(
         )
         
         # Simpan hasil pembersihan ke file csv baru
-        df.to_csv('/opt/airflow/data/P2M3_Dionisius_Ray_data_clean.csv', sep=',', index=False)
+        df.to_csv('/opt/airflow/data/data_clean.csv', sep=',', index=False)
     
     @task
     def post_to_elasticsearch():
@@ -92,7 +92,7 @@ with DAG(
         
         es = Elasticsearch("http://elasticsearch:9200")
         
-        df = pd.read_csv('/opt/airflow/data/P2M3_Dionisius_Ray_data_clean.csv')
+        df = pd.read_csv('/opt/airflow/data/data_clean.csv')
         
         # Convert DataFrame to a list of dictionaries
         records = df.to_dict(orient='records')
@@ -100,7 +100,7 @@ with DAG(
         # Menambahkan index
         actions = [
         {
-            "_index": "p2m3_dionisius_ray",
+            "_index": "adidas_dionisius_ray",
             "_source": record
         }
         for record in records

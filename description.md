@@ -2,15 +2,15 @@
 
 ## Repository Outline
 1. README.md - Penjelasan gambaran umum project
-2. P2M3_Dionisius_Ray_conceptual.txt - Text file yang menjawab Conceptual Problem
-3. P2M3_Dionisius_Ray_DAG_graph.jpg - File gambar yang memberikan gambaran alur pemrosesan data.
-4. P2M3_Dionisius_Ray_ddl.txt - File text yang berisi command Query yang digunakan pada saat memasukan data kedalam PostgreSQL
-5. P2M3_Dionisius_Ray_GX.ipynb - Notebook yang melakukan validasi atas data yang akan digunakan menggunakan Great Expectations
-6. .env - File yang mengatur setting airflow
-7. airflow_ES.yaml - File yang digunakan untuk compose docker container.
-8. images - Folder yang berisi 6 gambar visualisasi dan insightnya berserta gambar perkenalan dan kesimpulan
+2. graph.jpg - File gambar yang memberikan gambaran alur pemrosesan data.
+3. ddl.txt - File text yang berisi command Query yang digunakan pada saat memasukan data kedalam PostgreSQL
+4. great_expectations.ipynb - Notebook yang melakukan validasi atas data yang akan digunakan menggunakan Great Expectations
+5. .env - File yang mengatur setting airflow
+6. airflow_ES.yaml - File yang digunakan untuk compose docker container.
+7. images - Folder yang berisi 6 gambar visualisasi dan insightnya berserta gambar perkenalan dan kesimpulan
+8. data_raw - File dataset mentah yang digunakan
 9. dags
-    1. P2M3_Dionisius_Ray_DAG.py - Script python yang digunakan airflow dalam pemrosesan data
+    1. DAG.py - Script python yang digunakan airflow dalam pemrosesan data
 
 ## Problem Background
 Sebagai salah satu pegawai data analytics pada Adidas, saya diminta untuk membuatkan sebuah strategi yang dapat diterapkan untuk meningkatkan performa toko yang kesulitan pada region Midwest. Dari hasil data analisis yang dilakukan, company berharap saya sebagai data analyst dapat membantu tim sales untuk meningkatkan keuntungan yang mereka dapatkan sebesar 10% dalam jangka waktu 6 bulan kedepan.
@@ -59,9 +59,3 @@ Tools/Source Lain:
 [Adidas Sales Dataset](https://www.kaggle.com/datasets/ahmedabbas757/dataset)
 
 ---
-
-**Referensi tambahan:**
-- [Basic Writing and Syntax on Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [Contoh readme](https://github.com/fahmimnalfrzki/Swift-XRT-Automation)
-- [Another example](https://github.com/sanggusti/final_bangkit) (**Must read**)
-- [Additional reference](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
