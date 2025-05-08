@@ -1,4 +1,5 @@
 # Judul Project
+Adidas Sales Analysis
 
 ## Repository Outline
 1. README.md - Penjelasan gambaran umum project
